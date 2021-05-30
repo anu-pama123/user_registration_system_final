@@ -30,7 +30,7 @@ public class UserRegistrationBuilder
     public static void main(String[] args)
     {
         Scanner input;
-        String firstName, secondName, emailId;
+        String firstName, secondName, emailId, mobileNumber;
         input = new Scanner(System.in);
         System.out.println("Enter your name(Should start with capital letter and has minimum 3 character) : ");
         firstName = input.nextLine();
@@ -44,5 +44,9 @@ public class UserRegistrationBuilder
         emailId = input.nextLine();
         String emailIdPattern = "^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.][a-zA-Z]{2,3}){1,2}$"; //pattern of email id
         outputChecker(checkPattern(emailId, emailIdPattern));
+        System.out.println("Enter your mobile number) : ");
+        mobileNumber = input.nextLine();
+        String mobileNumberPattern="^[0-9]{2}(\\s)?[0-9]{10}$"; ; //pattern of mobile number
+        outputChecker(checkPattern(mobileNumber, mobileNumberPattern));
     }
 }
