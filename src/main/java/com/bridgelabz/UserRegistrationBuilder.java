@@ -50,7 +50,7 @@ public class UserRegistrationBuilder
         outputChecker(checkPattern(mobileNumber, mobileNumberPattern));
         System.out.println("Enter your password(minimum 8 character) : ");
         password = input.nextLine();
-        String passwordPattern="^[a-zA-z]{8,}$"; //pattern of password
+        String passwordPattern="^(?=.*?[A-Z])[a-zA-Z]{8,}$";; //pattern of password
         outputChecker(checkPattern(password, passwordPattern));
     }
 }
