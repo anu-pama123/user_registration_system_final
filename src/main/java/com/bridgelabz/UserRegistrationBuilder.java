@@ -30,15 +30,19 @@ public class UserRegistrationBuilder
     public static void main(String[] args)
     {
         Scanner input;
-        String firstName, secondName;
+        String firstName, secondName, emailId;
         input = new Scanner(System.in);
         System.out.println("Enter your name(Should start with capital letter and has minimum 3 character) : ");
         firstName = input.nextLine();
-        String pattern = "^[A-Z]{1}+[a-z]{2,}$";
+        String pattern = "^[A-Z]{1}+[a-z]{2,}$"; // pattern of first name
         outputChecker(checkPattern(firstName, pattern));
         System.out.println("Enter your second name(Should start with capital letter and has minimum 3 character) : ");
         secondName = input.nextLine();
-        String secondNamePattern= "^[A-Z]+[a-z]{2,}$"; // pattern of second name
+        String secondNamePattern= "^[A-Z]+[a-z]{2,}$"; // pattern of last name
         outputChecker(checkPattern(secondName, secondNamePattern));
+        System.out.println("Enter your email address : ");
+        emailId = input.nextLine();
+        String emailIdPattern = "^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.][a-zA-Z]{2,3}){1,2}$"; //pattern of email id
+        outputChecker(checkPattern(emailId, emailIdPattern));
     }
 }
