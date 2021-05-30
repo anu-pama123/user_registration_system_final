@@ -29,12 +29,16 @@ public class UserRegistrationBuilder
     }
     public static void main(String[] args)
     {
-        Scanner name;
-        String input;
+        Scanner input;
+        String firstName, secondName;
+        input = new Scanner(System.in);
         System.out.println("Enter your name(Should start with capital letter and has minimum 3 character) : ");
-        name = new Scanner(System.in);
-        input = name.nextLine();
+        firstName = input.nextLine();
         String pattern = "^[A-Z]{1}+[a-z]{2,}$";
-        outputChecker(checkPattern(input, pattern));
+        outputChecker(checkPattern(firstName, pattern));
+        System.out.println("Enter your second name(Should start with capital letter and has minimum 3 character) : ");
+        secondName = input.nextLine();
+        String secondNamePattern= "^[A-Z]+[a-z]{2,}$"; // pattern of second name
+        outputChecker(checkPattern(secondName, secondNamePattern));
     }
 }
